@@ -22,9 +22,9 @@ export default function ScssAssessment() {
           Solution:
         </h4>
         <div className="grid bg-purple-like grid-cols-12 max-w-sm divide-purple-like divide-x divide-y">
-          <div className="h-40 bg-purple-like text-teal-like flex items-center justify-center col-span-2">John</div>
-          <div className="h-40 bg-teal-like text-purple-like flex items-end justify-end p-1 text-end col-span-8">doe</div>
-          <div className="h-40 bg-purple-like text-teal-like flex items-center justify-center col-span-2">john</div>
+          <div className="h-40 bg-purple-like text-teal-like flex items-center justify-center col-span-3">John</div>
+          <div className="h-40 bg-teal-like text-purple-like flex items-end justify-end p-1 text-end col-span-6">doe</div>
+          <div className="h-40 bg-purple-like text-teal-like flex items-center justify-center col-span-3">john</div>
           <div className="h-80 bg-teal-like text-purple-like flex items-end justify-end p-1 row-span-2 col-span-7">doe</div>
           <div className="h-40 bg-teal-like text-purple-like flex items-end justify-end p-1 col-span-5">doe</div>
           <div className="h-40 bg-purple-like text-teal-like flex items-center justify-center col-span-5">john</div>
