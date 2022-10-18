@@ -1,31 +1,35 @@
-import React  from 'react';
+import React, { useEffect }  from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchAsync } from '../../../features/counter/cakeListSlice';
 
 export default function ReduxAssessmentTable() {
+  const dispatch = useDispatch();
+  const cakeList = useSelector((state)=> state.cakeList.value);
+  console.log(cakeList)
+
+  useEffect(()=> {
+    dispatch(fetchAsync());
+  }, []);
+
   return (
     <table id="reduxAssessmentTable">
       <thead>
         <tr>
-          <th>head1</th>
-          <th>head2</th>
-          <th>head3</th>
+          <th>id</th>
+          <th>title</th>
+          <th>description</th>
+          <th>image</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>cell1_1</td>
-          <td>cell2_1</td>
-          <td>cell3_1</td>
-        </tr>
-        <tr>
-          <td>cell1_2</td>
-          <td>cell2_2</td>
-          <td>cell3_2</td>
-        </tr>
-        <tr>
-          <td>cell1_3</td>
-          <td>cell2_3</td>
-          <td>cell3_3</td>
-        </tr>
+        {cakeList.map((cake) => (
+          <tr key={cake.id}>
+            <td>{cake.id}</td>
+            <td>{cake.title}</td>
+            <td>{cake.description}</td>
+            <td>{cake.image}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
